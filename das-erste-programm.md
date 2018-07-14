@@ -68,5 +68,21 @@ m2.stop(stop_action="hold")
 
 ```
 
-`from ev3dev.ev3 import *` : Dies importiert die Lego Roboterbefehle in Python. `ev3dev.ev3` ist hierbei ein so genanntes Paket \(Dateiordner\) aus dem alle Module importiert werden sollen. Der `*` ist hierbei eine so genannte Wildcard, die für eine beliebige Zeichensequenz steht. Der Befehl `import *.py` würde entsprechend alle Module mit der Endung `.py` importieren. Der nächste Befehl `from time import sleep` versetzt Python ganz entsprechend in die Lage z.B. den Befehl `sleep(4)`zu verwenden, bei dem der Interpreter für 4 Sekunden Pause macht. Mehr zur modularen Philosophie von Python kannst du beispielsweise in diesem empfehlenswerten [Python Tutorial ](https://www.python-kurs.eu/python3_modularisierung.php)nachlesen.
+`from ev3dev.ev3 import *` : Dies importiert die Lego Roboterbefehle in Python. `ev3dev.ev3` ist hierbei ein so genanntes Paket \(Dateiordner\) aus dem alle Module importiert werden sollen. Der `*` ist hierbei eine so genannte Wildcard, die für eine beliebige Zeichensequenz steht. Der Befehl `import *.py` würde entsprechend alle Module mit der Endung `.py` importieren. Der nächste Befehl `from time import sleep` versetzt Python ganz entsprechend in die Lage z.B. den Befehl `sleep(4)`zu verwenden, bei dem der Interpreter für 4 Sekunden Pause macht. Mehr zur modularen Philosophie von Python kannst du beispielsweise in diesem empfehlenswerten [Python Tutorial ](https://www.python-kurs.eu/python3_modularisierung.php)nachlesen. Der Befehl
+
+```python
+m1 = LargeMotor('outA')
+```
+
+erzeugt ein Motorenobjekt `m1`. Wollen wir irgendetwas im Folgenden Programm mit dem Motor machen der an Ausgang A `('outA')`hängt, so müssen wir dies in der Form `m1.funktion(parameter=wert)`schreiben. Wie du siehst passen die beiden Befehle 
+
+```python
+m1.run_forever(speed_sp=900)
+```
+
+```python
+m1.stop(stop_action="hold")
+```
+
+genau in dieses Schema. Im ersten Befehl wird, wie der Name der Funktion schon sagt, der Motor mit 900 pro Mille seiner maximalen Leistung für immer eingeschaltet \(wenn kein Befehl kommt der ihn stoppt\) und im zweiten wird er mit der Aktion "halt" \(d.h. er läuft nicht aus\) gestoppt. 
 

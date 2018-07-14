@@ -2,4 +2,5 @@
 
 * [EV3 mit Python](README.md)
 * [Das erste Programm](das-erste-programm.md)
+* [Weitere einfache Programme](weitere-einfache-programme.md)
 

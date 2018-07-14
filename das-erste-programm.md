@@ -49,7 +49,7 @@ python3 firstprog.py
 
 das Programm im Terminal starten. Die Nano Tastaturbefehle werden zum Glück in der unteren Zeile angezeigt, wobei zu beachten ist, dass mit `^` die `Strg` Taste gemeint ist. Falls du beim Tippen einen Fehler gemacht hast, wird dir dies vom Python Interpreter, der deinen Code Schritt für Schritt interpretiert, angezeigt. Achte vor allem auf die erste Nummer der Textzeile in der ein Fehler auftritt. **Beim wiederholten Verbessern und Ausprobieren deines Codes ist es wichtig, dass du die bereits eingetippten Befehle mit den Pfeiltasten wieder aufrufen kannst**. Die Bedeutungen der Befehle im ersten Programm sollen nun schrittweise besprochen werden.  
 
-`#!/usr/bin/env python3` : Diese Zeile hat zur Folge, dass man das Programm auch ohne USB Kabel vom Roboter aus starten kann, indem man es auswählt und den mittleren Startknopf drückt. Dies ist nämlich gleichbedeutend mit dem Aufruf der Datei im Terminal. Die so genannten shebang Zeichen `#!` machen dabei ganz allgemein klar, dass die Datei als Script mit einem Interpreter \(in unserem Fall Python\) ausgeführt werden soll. Hierzu wird zunächst das Programm `env` \(**env**ironment\) aufgerufen, um den Python Interpreter zu finden. Dieses befindet sich wiederum im Pfad `usr/` \(**u**nix **s**ystem **r**esources\) `bin/`\(**bin**aries\). 
+`#!/usr/bin/env python3` : Diese Zeile hat zur Folge, dass man das Programm auch ohne USB Kabel vom Roboter aus starten kann, indem man es auswählt und den mittleren Startknopf drückt. Dies ist nämlich gleichbedeutend mit dem Aufruf der Datei im Terminal. Die so genannten shebang Zeichen `#!` machen dabei ganz allgemein klar, dass die Datei als Skript mit einem Interpreter \(in unserem Fall Python\) ausgeführt werden soll. Hierzu wird zunächst das Programm `env` \(**env**ironment\) aufgerufen, um den Python Interpreter zu finden. Dieses befindet sich wiederum im Pfad `usr/` \(**u**nix **s**ystem **r**esources\) `bin/`\(**bin**aries\). 
 
 Das `#` Zeichen dient in Python dazu Zeilen auszukommentieren d.h. alles was in der nachfolgenden Zeile steht, wird vom Interpreter ignoriert. Dies ist extrem nützlich, um Programme zu testen und Fehlerquellen zu finden. Probiere beispielsweise folgendes Programm aus:
 
@@ -85,4 +85,8 @@ m1.stop(stop_action="hold")
 ```
 
 genau in dieses Schema. Im ersten Befehl wird, wie der Name der Funktion schon sagt, der Motor mit 900 pro Mille seiner maximalen Leistung für immer eingeschaltet \(wenn kein Befehl kommt der ihn stoppt\) und im zweiten wird er mit der Aktion "halt" \(d.h. er läuft nicht aus\) gestoppt. 
+
+**Übung1:** Schreibe ein Programm bei dem der Roboter zunächst 3 Sekunden mit 50% seiner maximalen Leistung geradeaus fährt und dann 3 Sekunden mit 100% seiner maximalen Leistung. Danach soll er mit Auslaufen stoppen.
+
+
 

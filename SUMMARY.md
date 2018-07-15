@@ -4,4 +4,7 @@
 * [Das erste Programm](das-erste-programm.md)
 * [Motorbefehle](weitere-einfache-programme.md)
 * [Schleifen](schleifen.md)
+* [Sensoren](sensoren.md)
+* [Verzweigungen](verzweigungen.md)
+* [Variablen](variablen.md)
 

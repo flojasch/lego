@@ -2,6 +2,6 @@
 
 * [EV3 mit Python](README.md)
 * [Das erste Programm](das-erste-programm.md)
-* [Motorbefehle](weitere-einfache-programme/README.md)
-  * [Untitled](weitere-einfache-programme/untitled.md)
+* [Motorbefehle](weitere-einfache-programme.md)
+* [Schleifen](schleifen.md)
 

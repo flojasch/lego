@@ -84,6 +84,8 @@ for i in range(0,4):
 
 **Erklärung zur Schleife:**  Der Buchstabe `i` ist eine Variable, die den Bereich durchläuft, der durch `range(0,4)` angegeben ist. `i` startet also bei 0 und endet bei 3 d.h. bei der letzten Zahl, die kleiner als die zweite Grenze im `range` Befehl ist. Für jeden Wert von i werden dann die Befehle durchlaufen, die unter der  "`for i in range(0,4):`"  Zeile eingerückt sind. Die Einrückung dient hier also nicht nur der Übersichtlichkeit des Quelltextes, sondern hat in Python eine sehr wichtige Bedeutung. Die Einrückung erzeugst du in Nano mit der Tabulatortaste    ![](.gitbook/assets/onenote_einsteiger_tabelle_tabtaste.png)  und **nicht** mit Leerzeichen!
 
+**Aufgabe:** Schreibe ein Programm, dass den Roboter 3 mal im Quadrat fahren lässt.
+
 Mehr zur Schleife mit `for` in Python findest du [hier](https://www.python-kurs.eu/python3_for-schleife.php). 
 
 

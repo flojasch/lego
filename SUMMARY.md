@@ -7,4 +7,5 @@
 * [Variablen](sensoren.md)
 * [Bedingte Anweisungen](verzweigungen.md)
 * [Bedingte Wiederholung](bedingte-wiederholung.md)
+* [Sensoren](sensoren-1.md)
 

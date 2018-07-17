@@ -24,7 +24,7 @@ nano erstesprog.py
 
 erzeugst du dabei gleichzeitig eine Textdatei mit Namen erstesprog.py.
 
-![](.gitbook/assets/grafik.png)
+![](.gitbook/assets/grafik%20%282%29.png)
 
 Schreibe nun folgenden Text \(Code\) in die Datei:
 

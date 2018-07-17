@@ -27,7 +27,7 @@ sleep(5)   # Dies gibt dem Motor Zeit zu laufen
 
 ```
 
- **Aufgabe:** Um welchen Winkel dreht sich der Motor? Probiere das Programm aus und überprüfe deine Vermutung. Was passiert, jeweils wenn man `stop_action="brake"` oder `stop_action="coast"` verwendet?
+ **Aufgabe:** Um welchen Winkel dreht sich der Motor? Probiere das Programm aus und überprüfe deine Vermutung. Was passiert jeweils, wenn man `stop_action="brake"` oder `stop_action="coast"` verwendet?
 
 ###  2. Den Motor eine bestimmte Zeitspanne drehen lassen
 

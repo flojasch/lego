@@ -6,7 +6,7 @@ description: >-
 
 # Wiederholungen
 
-#### Auf der Stelle drehen
+### Auf der Stelle drehen
 
 um den Roboter auf der Stelle drehen zu lassen, verwendest du einfach folgenden Codeschnipsel
 
@@ -26,7 +26,7 @@ m1.wait_while('running')
 
 **Aufgabe:** Ändere den Codeschnipsel so ab, dass der Roboter sich um 90° dreht ****
 
-#### Ein Quadrat fahren
+### Ein Quadrat fahren
 
 Um den Roboter ein Quadrat fahren zu lassen, könnte man geneigt sein, folgenden Code zu verwenden
 

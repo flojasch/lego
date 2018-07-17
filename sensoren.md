@@ -1,4 +1,12 @@
+---
+description: >-
+  Damit der Roboter sich etwas merken kann, benötigt seine Programmiersprache
+  Variablen.
+---
+
 # Variablen
+
+### Variablen
 
 Variablen bilden einen sehr wichtigen Aspekt jeder Programmiersprache. Variablen sind eine Art Behälter oder Container in denen Werte gespeichert werden können. Wir können Variablen an verschiedenen Stellen im Programm nutzen, und wir können Variablen ändern. Veranschaulichen wir die Verwendung von Variablen anhand eines Beispiels.
 
@@ -38,7 +46,7 @@ Der Variablen „fahren“ wird der Startwert 180 zugewiesen. Wird nun die Varia
 
 Ein wichtiger Unterschied zur Mathematik besteht darin, dass das Gleichheitszeichen die Bedeutung der Zuweisung "_rechte Seite bekommt den Wert der linken Seite"_ hat.
 
-#### Zufallszahlen
+### Zufallszahlen
 
 In allen bisher aufgeführten Programmen haben wir genau definiert, was der Roboter tun soll. Aber die Dinge werden oftmals viel interessanter, wenn man nicht genau weiß was der Roboter tun wird. Wir wollen einige Zufälligkeiten in den Bewegungen des Roboters einbauen. Mit Python kannst Du zufällige Zahlen erzeugen. Das folgende Programm verwendet Zufallszahlen, um den Roboter „beliebig“ umher fahren zu lassen. Der Roboter fährt eine zufällige Zeit geradeaus und macht anschließend eine zufällige Drehung.
 

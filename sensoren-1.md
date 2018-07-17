@@ -21,7 +21,7 @@ Die Datei des Programms muss vorher einmal mit `chmod +x dateiname` ausführbar 
 {% endhint %}
 
 {% hint style="warning" %}
-Da sich das Programm in einer Endlosschleife befindet, musst du es durch langes drücken der grauen "zurück" Taste oben links beenden.
+Da sich das Programm in einer Endlosschleife befindet, musst du es durch langes Drücken der grauen "zurück" Taste oben links beenden.
 {% endhint %}
 
 ```python
@@ -51,11 +51,66 @@ while True: #Endlosschleife da die Bedingung immer wahr ist
 
 ```
 
-    
-
 ### Der Lichtsensor
 
 Sensoren sind Fühler, wie für uns Menschen die Augen, die Ohren oder die Hände, mit denen der Roboter sehen, hören und tasten kann. Das tolle an unserem Lego Roboter ist, dass wir mehrere Sensoren an ihm anschließen können, und dass wir den Roboter auf die Sensoren reagieren lassen können. Bevor wir mit dem Einbinden von Sensoren in ein Python Programm beginnen können, müssen wir unseren Roboter etwas umbauen, indem wir zwei Lichtsensoren hinzufügen. Folge zu diesem Zweck der Bauanleitung ab Seite 47. Füge in entsprechender Weise auch den 2. Lichtsensor hinzu.
+
+```python
+#!/usr/bin/env python3
+
+from ev3dev.ev3 import *
+from time import sleep
+
+mb = LargeMotor('outB')#Die Motoren sind an den Ausgngen B und  C
+mc = LargeMotor('outA')
+
+cl1= ColorSensor('in4')# die Lichtsensoren sind an den Ausgngen 4 und 2 
+cl2=ColorSensor('in1')
+
+cl1.mode='COL-REFLECT' #in diesem Modus misst der Lichtsensor die reflektierte $
+cl2.mode='COL-REFLECT'
+
+while True:
+        mb.run_forever(speed_sp=500)
+        mc.run_forever(speed_sp=500)
+
+        if cl1.value() < 20 or cl2.value() < 20 :
+                mb.stop(stop_action="hold")
+                mc.stop(stop_action="hold")
+                Sound.speak('Oh shit').wait()
+                mb.run_forever(speed_sp=-500)
+                mc.run_forever(speed_sp=-500)
+                sleep(1)
+
+```
+
+Der Lichtsensor hat verschiedene Modi und kann auch Farbe wahrnehmen. In obigem Beispiel misst er einfach die Stärke des reflektierten Lichtes, das er selbst aussendet. 
+
+{% hint style="warning" %}
+Daher darf er nicht zu nah am Boden angebracht werden.
+{% endhint %}
+
+Um den Schwellenwert des Lichtsensors in einer `if` Anweisung an die Beschaffenheit des Untergrundes und die Lichtverhältnisse anzupassen, ist dieses kleine Programm sehr nützlich: 
+
+```python
+#!/usr/bin/env python3
+
+from ev3dev.ev3 import *
+from time import sleep
+
+cl1= ColorSensor('in1')
+cl1.mode='COL-REFLECT'
+
+while True:
+        print("Intensitaet des Lichtes: "+str(cl1.value()))
+        sleep(1)
+
+
+```
+
+Der Lichtsensor kann auch Farbe erkennen. Mehr dazu später. 
+
+### Der Ultraschallsensor
 
 
 

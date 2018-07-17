@@ -109,11 +109,40 @@ while True:
 
 ```
 
-Der Lichtsensor kann auch Farbe erkennen. Mehr dazu später. 
-
 **Aufgabe:** Ergänze obiges Programm, so dass der Roboter sich um 90° nach links dreht wenn nur der rechte Lichtsensor über dem Abgrund steht, um 90° nach rechts dreht wenn nur der linke Lichtsensor über dem Abgrund steht und rückwärts fährt wenn beide Sensoren über dem Abgrund stehen. 
 
 **Challenge:** Konstruiere und justiere den Roboter so, dass er möglichst schnell einer vorgegebenen schwarzen Linie folgt.
+
+Der Lichtsensor kann auch Farbe erkennen. Hier dazu ein Beispiel:
+
+```python
+#!/usr/bin/env python3
+# so that script can be run from Brickman
+
+from ev3dev.ev3 import *
+from time   import sleep
+
+# Connect EV3 color sensor to any sensor port
+# and check it is connected.
+
+cl = ColorSensor() 
+assert cl.connected, "Connect a single EV3 color sensor to any sensor port"
+
+# Connect touch sensor to any sensor port
+# and check it is connected.
+ts = TouchSensor();    assert ts.connected, "Connect a touch sensor to any port"  
+# you can have 2 statements on the same line if you use a semi colon
+
+# Put the color sensor into COL-COLOR mode.
+cl.mode='COL-COLOR'
+
+colors=('unknown','black','blue','green','yellow','red','white','brown')
+while not ts.value():    # Stop program by pressing touch sensor button
+    print(colors[cl.value()])
+    #Sound.speak(colors[cl.value()]).wait()
+    sleep(1)
+Sound.beep()
+```
 
 ### Der Ultraschallsensor ![](.gitbook/assets/images.jpeg) 
 

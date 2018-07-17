@@ -21,20 +21,20 @@ m2 = LargeMotor('outA')
 def drehen(grad):
         m1.run_to_rel_pos(position_sp=grad, speed_sp=500,stop_action="hold")
         m2.run_to_rel_pos(position_sp=-grad, speed_sp=500,stop_action="hold")
-        m1.wait_while('running')        
+        m1.wait_while('running')
 
-def fahren(grad)
+def fahren(grad):
         m1.run_to_rel_pos(position_sp=grad, speed_sp=500,stop_action="hold")
         m2.run_to_rel_pos(position_sp=grad, speed_sp=500,stop_action="hold")
-        m1.wait_while('running') 
+        m1.wait_while('running')
 
-for i in range(0,50):       
+for i in range(0,50):
         fahren(360)
         if randint(0,2)==1:
-                drehen(180)        
+                drehen(180)
         else:
-                drehen(-180)        
-                
+                drehen(-180)
+
 ```
 
 Zunächst haben wir in diesem Programm die Funktionen `drehen(grad)` und `fahren(grad)` eingeführt. Dies geschieht immer mit der `def` \(definition\) Anweisung und einem eingerückten Code block. Durch die Definition der Funktionen wird der folgende Code viel übersichtlicher, kürzer und leichter lesbar. Mehr zu Funktionen und Methoden in Python findest du [hier](https://www.python-kurs.eu/python3_funktionen.php). Hinter dem`if` Befehl steht immer eine Bedingung gefolgt von einem `:`. Ist die Bedingung erfüllt, so wird der Befehlsblock ausgeführt, der unter der Zeile mit dem `if` Befehl um eine Tabulatortaste eingerückt ist. Ansonsten wird der eingerückte Befehlsblock unter der `else:` Anweisung ausgeführt. 

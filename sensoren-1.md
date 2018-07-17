@@ -4,9 +4,7 @@ description: 'Jetzt lernt der Roboter, auf seine Umwelt zu reagieren.'
 
 # Sensoren
 
-### Der Tastsensor
-
-![](.gitbook/assets/45507.jpg) 
+### Der Tastsensor![](.gitbook/assets/45507.jpg)
 
 Der Roboter soll jetzt auf Hindernisse reagieren können. Hierzu musst du zunächst einen Tastsensor anbauen, der nach vorne zeigt. Wird dieser gedrückt, so weiß der Roboter, dass er irgendwo angestoßen ist. An dem Tastsensor solltest du noch eine selbst entworfene Konstruktion anbringen, um zu gewährleisten, dass der Knopf beim anstoßen auch tatsächlich gedrückt wird.
 
@@ -28,30 +26,33 @@ Da sich das Programm in einer Endlosschleife befindet, musst du es durch langes 
 #!/usr/bin/env python3
 
 from ev3dev.ev3 import *
-frim time import sleep
+from time import sleep
 
 m1 = LargeMotor('outB')
 m2 = LargeMotor('outA')
 
 ts = TouchSensor()
-# ein Berührungssensorobjekt wird erzeugt 
-assert ts.connected, "Verbinde einen Berührungssensor mit irgend einem Eingang" 
+# ein Beruehrungssensorobjekt wird erzeugt 
+assert ts.connected, "Verbinde einen Ber  hrungssensor mit irgend einem Eingang$
 # falls kein Sensor vorhanden ist wird eine Fehlermeldung ausgegeben 
 # und das Programm beendet
 while True: #Endlosschleife da die Bedingung immer wahr ist
         m1.run_forever(speed_sp=700)
-        m2.run_forever(speed_sp=700) 
-        if ts.value==True
-                Sound.speak('Whoops').wait()#Dieser Befehl lässt den Roboter einen beliebigen Text sprechen 
+        m2.run_forever(speed_sp=700)
+        if ts.value()==True:
+                m1.stop()
+                m2.stop()
+                Sound.speak('Hello my name is E V 3').wait()#Dieser Befehl laes$
+                sleep(2)
                 m1.run_forever(speed_sp=-700)
                 m2.run_forever(speed_sp=-700)
-                sleep(1) #fahre für 1 Sekunde rückwärts
-                m2.run_forever(speed_sp=700)
-                sleep(1) #drehe dich für 1 Sekunde
-
+                sleep(1) #fahre fuer 1 Sekunde rueckwaerts
+                
 ```
 
-### Der Lichtsensor
+**Aufgabe:** Ergänze obiges Programm, so dass sich der Roboter nach seiner Rückwärtsfahrt um einen zufälligen Winkel zwischen 0° und 720° dreht. 
+
+### Der Lichtsensor ![](.gitbook/assets/45506.jpeg) 
 
 Sensoren sind Fühler, wie für uns Menschen die Augen, die Ohren oder die Hände, mit denen der Roboter sehen, hören und tasten kann. Das tolle an unserem Lego Roboter ist, dass wir mehrere Sensoren an ihm anschließen können, und dass wir den Roboter auf die Sensoren reagieren lassen können. Bevor wir mit dem Einbinden von Sensoren in ein Python Programm beginnen können, müssen wir unseren Roboter etwas umbauen, indem wir zwei Lichtsensoren hinzufügen. Folge zu diesem Zweck der Bauanleitung ab Seite 47. Füge in entsprechender Weise auch den 2. Lichtsensor hinzu.
 
@@ -110,7 +111,75 @@ while True:
 
 Der Lichtsensor kann auch Farbe erkennen. Mehr dazu später. 
 
-### Der Ultraschallsensor
+**Aufgabe:** Ergänze obiges Programm, so dass der Roboter sich um 90° nach links dreht wenn nur der rechte Lichtsensor über dem Abgrund steht, um 90° nach rechts dreht wenn nur der linke Lichtsensor über dem Abgrund steht und rückwärts fährt wenn beide Sensoren über dem Abgrund stehen. 
 
+**Challenge:** Konstruiere und justiere den Roboter so, dass er möglichst schnell einer vorgegebenen schwarzen Linie folgt.
 
+### Der Ultraschallsensor ![](.gitbook/assets/images.jpeg) 
+
+Im Lego-Mindstorms-Kasten ist auch ein Ultraschallsensor enthalten. Mit ihm kannst Du Entfernungen bestimmen. Der Sensor sendet Ultraschallwellen aus und misst die Zeit, die diese Wellen benötigen, bis sie wieder in den Sensor zurück reflektiert werden. Darüber lässt sich die Entfernung zu einem Gegenstand in Sensorrichtung ermitteln. Mit diesem Sensor kann der Roboter wie eine Fledermaus im Dunkeln Hindernisse erkennen ehe er dagegen fährt, wie dies beispielsweise mit dem Tastsensor der Fall ist. Im einfachen Beispielprogramm fährt der Roboter so lange geradeaus, bis er 25cm vor einem Gegenstand ist. Verwende die Bauanleitung, um den Ultraschallsensor an deinem Roboter anzubringen und lasse folgendes Programm laufen.
+
+```python
+#!/usr/bin/env python3
+
+from ev3dev.ev3 import *
+from time import sleep
+
+m1 = LargeMotor('outB')
+m2 = LargeMotor('outA')
+
+# Verbinde den Ultraschallsensor mit einem der Ausgaenge 1-4
+us = UltrasonicSensor()
+
+# Bringe den Ultraschallsensor in Entfernungsmodus
+us.mode='US-DIST-CM'
+
+while True:
+        m1.run_forever(speed_sp=500)
+        m2.run_forever(speed_sp=500) #fahre vorwaerts
+        distance = us.value()/10  # verwandel  mm in cm
+        print(str(distance) + " " + "cm")
+        if distance < 25:
+                m1.run_forever(speed_sp=-500)
+                m2.run_forever(speed_sp=-500)
+                sleep(1) #fahre fuer 1 Sekunde rueckwaerts
+                m2.run_forever(speed_sp=500)
+                sleep(1) #drehe dich fuer 1 Sekunde
+
+```
+
+### Der Gyrosensor ![](.gitbook/assets/s-l300.jpg) 
+
+Der Gyrosensor misst den Winkel, um den sich der Roboter gedreht hat. Es ist wichtig, denn Roboter absolut ruhig zu halten während das Programm startet, da der Sensor sonst auch in Ruhe den Winkel hochzählt. Hier ein Beispielprogramm. Finde heraus was es macht!
+
+```python
+#!/usr/bin/env python3
+# so that script can be run from Brickman
+
+from ev3dev.ev3 import *
+from time import sleep
+
+# Connect gyro and touch sensors to any sensor port
+# and check they are connected.
+gy = GyroSensor() 
+assert gy.connected, "Connect a single gyro sensor to any sensor port"
+ts = TouchSensor();    assert ts.connected, "Connect a touch sensor to any port"  
+# can have 2 statements on same line if use semi colon
+
+# Put the gyro sensor into ANGLE mode.
+gy.mode='GYRO-ANG'
+
+units = gy.units
+#reports 'deg' meaning degrees
+
+while not ts.value():    # Stop program by pressing touch sensor button
+    angle = gy.value()
+    print(str(angle) + " " + units)
+    Sound.tone(1000+angle*10, 1000).wait()
+    sleep(0.5)
+
+Sound.beep()
+```
+
+**Challenge:** Baue einen Sumo Roboter, der auf dem Tisch bleibt, den Gegner sucht und versucht diesen herunterzuschieben.
 

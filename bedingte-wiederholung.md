@@ -31,12 +31,12 @@ m2 = LargeMotor('outA')
 def drehen(zeit):
         m1.run_timed(time_sp=zeit, speed_sp=750)
         m2.run_timed(time_sp=zeit, speed_sp=-750)
-        m1.wait_while('running')        
+        m1.wait_while('running')
 
-def fahren(zeit)
+def fahren(zeit):
         m1.run_timed(time_sp=zeit, speed_sp=750)
         m2.run_timed(time_sp=zeit, speed_sp=-750)
-        m1.wait_while('running')      
+        m1.wait_while('running')
 
 zeit=0
 
@@ -45,8 +45,7 @@ while zeit < 10000: #Zeit in Millisekunden!
         drehzeit=randint(0,1000)
         fahren(fahrzeit)
         drehen(drehzeit)
-        zeit=zeit+fahrzeit+drehzeit 
+        zeit=zeit+fahrzeit+drehzeit
+
 ```
-
-
 

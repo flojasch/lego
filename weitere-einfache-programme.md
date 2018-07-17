@@ -74,8 +74,8 @@ Wenn man ein Programm vom Terminal startet, stoppen die Motoren nicht immer selb
 #!/usr/bin/env python3
 from ev3dev.ev3 import *
 
-mB = LargeMotor('outB')
-mC = LargeMotor('outC')
+mB = LargeMotor('outA')
+mC = LargeMotor('outB')
 
 mB.stop()
 mC.stop()
@@ -83,5 +83,6 @@ mC.stop()
 # to make extra sure the motors have stopped:
 mB.run_forever(speed_sp=0)
 mC.run_forever(speed_sp=0)
+
 ```
 

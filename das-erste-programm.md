@@ -49,7 +49,13 @@ Mit `Strg+o`und anschließend `Enter` speicherst du den Text \(Code\) und mit `S
 python3 firstprog.py
 ```
 
-das Programm im Terminal starten. Die Nano Tastaturbefehle werden zum Glück in der unteren Zeile angezeigt, wobei zu beachten ist, dass mit `^` die `Strg` Taste gemeint ist. Falls du beim Tippen einen Fehler gemacht hast, wird dir dies vom Python Interpreter, der deinen Code Schritt für Schritt interpretiert, angezeigt. Achte vor allem auf die erste Nummer der Textzeile in der ein Fehler auftritt. **Beim wiederholten Verbessern und Ausprobieren deines Codes ist es wichtig, dass du die bereits eingetippten Befehle mit den Pfeiltasten wieder aufrufen kannst**. Die Bedeutungen der Befehle im ersten Programm sollen nun schrittweise besprochen werden.  
+das Programm im Terminal starten. Die Nano Tastaturbefehle werden zum Glück in der unteren Zeile angezeigt, wobei zu beachten ist, dass mit `^` die `Strg` Taste gemeint ist. Falls du beim Tippen einen Fehler gemacht hast, wird dir dies vom Python Interpreter, der deinen Code Schritt für Schritt interpretiert, angezeigt. Achte vor allem auf die erste Nummer der Textzeile in der ein Fehler auftritt. 
+
+{% hint style="info" %}
+Beim wiederholten Verbessern und Ausprobieren deines Codes ist es wichtig, dass du die bereits eingetippten Befehle mit den Pfeiltasten ![](.gitbook/assets/pfeiltasten-18970385.jpg) wieder aufrufen kannst. 
+{% endhint %}
+
+Die Bedeutungen der Befehle im ersten Programm sollen nun schrittweise besprochen werden.  
 
 #### 1. Programme vom Roboter ohne USB Verbindung starten
 

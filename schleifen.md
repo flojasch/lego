@@ -4,7 +4,7 @@ description: >-
   Programmiersprachen: Die Schleife
 ---
 
-# Schleifen
+# Wiederholungen
 
 #### Auf der Stelle drehen
 

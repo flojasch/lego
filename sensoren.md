@@ -62,5 +62,7 @@ for i in range(0,50):
 
 ```
 
-Zunächst importiert das Programm vom Paket `random` mit `import *`alle Module. dann wird der Variablen `fahren` ein ganzzahliger Zufallswert zwischen 0 und 600 \(`fahren=randint(0,600)`\) und der Variablen drehen einer zwischen 0 und 360 bei jedem Schleifendurchlauf zugewiesen. Die Werte dieser Variablen bestimmen dann in den folgenden Befehlen jeweils wie weit der Roboter geradeaus fährt und wie weit er sich dreht.  
+Zunächst importiert das Programm vom Paket `random` mit `import *`alle Module. dann wird der Variablen `fahren` ein ganzzahliger Zufallswert zwischen 0 und 600 \(`fahren=randint(0,600)`\) und der Variablen drehen einer zwischen 0 und 360 bei jedem Schleifendurchlauf zugewiesen. Die Werte dieser Variablen bestimmen dann in den folgenden Befehlen jeweils wie weit der Roboter geradeaus fährt und wie weit er sich dreht.
+
+Mehr zu Variablen in Python findest du [hier](https://www.python-kurs.eu/python3_variablen.php). 
 

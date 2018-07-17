@@ -3,7 +3,8 @@
 * [EV3 mit Python](README.md)
 * [Das erste Programm](das-erste-programm.md)
 * [Motorbefehle](weitere-einfache-programme.md)
-* [Schleifen](schleifen.md)
+* [Wiederholungen](schleifen.md)
 * [Variablen](sensoren.md)
-* [Verzweigungen](verzweigungen.md)
+* [Bedingte Anweisungen](verzweigungen.md)
+* [Bedingte Wiederholung](bedingte-wiederholung.md)
 

@@ -47,7 +47,13 @@ Mit `Strg+o`und anschließend `Enter` speicherst du den Text \(Code\) und mit `S
 python3 firstprog.py
 ```
 
-das Programm im Terminal starten. Die Nano Tastaturbefehle werden zum Glück in der unteren Zeile angezeigt, wobei mit `^` die `Strg` Taste gemeint ist. Der Nano Texteditor ist für nicht Hacker etwas gewöhnungsbedürftig. Wenn du größere Änderungen in deinem Programm machst, ist es daher ratsam die Python idle zu verwenden und den dort getippten Text durch Markieren in der Python idle und anschließendem Drücken des Mausrades in den Nano Editor zu übertragen \(`Strg+v` funktioniert im Terminal nicht\). Genauso kannst du die Programmbeispiele dieser Anleitung in Nano übertragen.  
+das Programm im Terminal starten.
+
+{% hint style="info" %}
+Beim Eintippen von Befehlen oder Dateinamen brauchst du immer nur so viele Buchstaben zu tippen, bis der Name oder der Befehl eindeutig ist. Dann kannst du ihn mit der Tabulatortaste ![](.gitbook/assets/tab-key-word-tutorials.jpg) vervollständigen.
+{% endhint %}
+
+ Die Nano Tastaturbefehle werden zum Glück in der unteren Zeile angezeigt, wobei mit `^` die `Strg` Taste gemeint ist und mit `M` die `Alt` Taste. Der Nano Texteditor ist für nicht Hacker etwas gewöhnungsbedürftig. Wenn du größere Änderungen in deinem Programm machst, ist es daher ratsam die Python idle zu verwenden und den dort getippten Text durch Markieren in der Python idle und anschließendem Drücken des Mausrades in den Nano Editor zu übertragen \(`Strg+v` funktioniert im Terminal nicht\). Genauso kannst du die Programmbeispiele dieser Anleitung in Nano übertragen.  
 
 ### Fehler
 
@@ -55,6 +61,10 @@ Falls dein Programmtext Fehler enthält, die gegen die Syntaxregeln von Python v
 
 {% hint style="info" %}
 Beim wiederholten Verbessern und Ausprobieren deines Codes ist es wichtig, dass du die bereits eingetippten Befehle mit den Pfeiltasten ![](.gitbook/assets/pfeiltasten-18970385.jpg) wieder aufrufen kannst. 
+{% endhint %}
+
+{% hint style="info" %}
+Am einfachsten ist es, dich über ein zweites Terminal in den Roboter einzuloggen. Dann braucht du Quelltextänderungen in Nano immer nur mit `Strg+o` zu speichern und kannst vom anderen Terminal das Programm starten, ohne Nano zu beenden.
 {% endhint %}
 
 Die Bedeutungen der Befehle des ersten Programmes sollen nun schrittweise besprochen werden.  
@@ -102,7 +112,7 @@ m1.stop(stop_action="hold")
 
 genau in dieses Schema. Im ersten Befehl wird, wie der Name der Funktion schon sagt, der Motor mit 900 pro Mille seiner maximalen Leistung für immer eingeschaltet \(wenn kein Befehl kommt der ihn stoppt\) und im zweiten wird er mit der Aktion "halt" \(d.h. er läuft nicht aus\) gestoppt. 
 
-**Übung1:** Schreibe ein Programm bei dem der Roboter zunächst 3 Sekunden mit 50% seiner maximalen Leistung geradeaus fährt und dann 3 Sekunden mit 100% seiner maximalen Leistung. Danach soll er mit Auslaufen stoppen.
+**Übung1:** Schreibe ein Programm, bei dem der Roboter zunächst 3 Sekunden mit 50% seiner maximalen Leistung geradeaus fährt und dann 3 Sekunden mit 100% seiner maximalen Leistung. Am Ende soll er mit Auslaufen stoppen.
 
 
 

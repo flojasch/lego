@@ -139,7 +139,7 @@ cl.mode='COL-COLOR'
 colors=('unknown','black','blue','green','yellow','red','white','brown')
 while not ts.value():    # Stop program by pressing touch sensor button
     print(colors[cl.value()])
-    #Sound.speak(colors[cl.value()]).wait()
+    Sound.speak(colors[cl.value()]).wait()
     sleep(1)
 Sound.beep()
 ```

@@ -8,4 +8,5 @@
 * [Bedingte Anweisungen](verzweigungen.md)
 * [Bedingte Wiederholung](bedingte-wiederholung.md)
 * [Sensoren](sensoren-1.md)
+* [Anhang: Einstieg in Python](anhang-einstieg-in-python.md)
 

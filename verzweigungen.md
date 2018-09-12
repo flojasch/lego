@@ -48,7 +48,7 @@ Beachte, dass ein wesentlicher Unterschied zwischen dem Befehl `a=b` und dem Aus
  Neben dem Vergleich von zwei Zahlen gibt es auch andere Bedingungen. Die am häufigsten gebrauchten sind
 
 | `!=` | ungleich |
-| --- | --- | --- | --- | --- |
+| :--- | :--- |
 | `<` | kleiner |
 | `<=` | kleiner gleich |
 | `>` | größer |
@@ -57,7 +57,7 @@ Beachte, dass ein wesentlicher Unterschied zwischen dem Befehl `a=b` und dem Aus
 Bedingungen können wie in der Umgangssprache mit `and` und `or` verknüpft werden. Hierfür zwei Beispiele:
 
 | `x > 10 and x<20` | ist x größer als 10 und kleiner als 20 ? |
-| --- | --- |
+| :--- | :--- |
 | `x < 10 or x > 100` | ist x kleiner als 10 oder größer als 100 ? |
 
 Verzweigung in einem Programmfluss wird immer herbeigeführt, indem der Wert einer Aussage abgefragt wird. Je nachdem ob der Wert `true` oder `false` ist, wird dann ein unterschiedlicher Block von Befehlen abgearbeitet.  ``      
